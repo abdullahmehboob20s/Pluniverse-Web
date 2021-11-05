@@ -7,6 +7,18 @@ import gameModeBox from "assets/images/game-modes-box.png";
 import arrowLeft from "assets/images/left-arrow.png";
 import arrowRight from "assets/images/right-arrow.png";
 import expeditionImg from "assets/images/Expedition.jpg";
+import Card from "components/Card/Card";
+import roadmapBtn from "assets/images/roadmap-button.png";
+import RoadmapCard from "components/RoadmapCard/RoadmapCard";
+import BackedByCard from "components/BackedByCard/BackedByCard";
+
+import backedByImg1 from "assets/images/backed-by-img-1.png";
+import backedByImg2 from "assets/images/backed-by-img-2.png";
+import backedByImg3 from "assets/images/backed-by-img-3.png";
+import backedByImg4 from "assets/images/backed-by-img-4.png";
+import backedByImg5 from "assets/images/backed-by-img-5.png";
+
+import footerImg from "assets/images/footer-img.png";
 
 function App() {
   return (
@@ -79,6 +91,75 @@ function App() {
         </div>
       </div>
 
+      <div className="special-features-wrapper">
+        <div className="container-wrapper">
+          <div>
+            <p className="special-feature-title waghu-family">
+              SPECIAL FEATURES
+            </p>
+            <img src={textImg} alt="" />
+          </div>
+
+          <div className="special-features-cards">
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+          </div>
+        </div>
+      </div>
+
+      <div className="roadmap-wrapper">
+        <div className="container-wrapper">
+          <div className="roadmap">
+            <a href="#" className="roadmap-btn">
+              <img src={roadmapBtn} alt="" />
+            </a>
+
+            <div className="roadmap-cards">
+              <div className="roadmap-cards-middle-line">
+                <RoadmapCard />
+                <RoadmapCard to="left" />
+                <RoadmapCard />
+                <RoadmapCard to="left" />
+                <RoadmapCard />
+                <RoadmapCard to="left" />
+              </div>
+            </div>
+            {/*  */}
+            <div className="backed-by-wrapper">
+              <p className="backed-by-title waghu-family">BACKED BY</p>
+
+              <div className="backed-by-cards">
+                <BackedByCard img={backedByImg1} />
+                <BackedByCard img={backedByImg2} />
+                <BackedByCard img={backedByImg3} />
+                <BackedByCard img={backedByImg4} />
+                <BackedByCard img={backedByImg5} />
+              </div>
+            </div>
+            {/*  */}
+          </div>
+        </div>
+      </div>
+
+      {/*  */}
+      <div className="footer-wrapper">
+        <div className="container-wrapper">
+          <div className="footer">
+            <div className="footer-row-1">
+              <div className="footer-row-1-left">
+                <img className="footer-brand" src={footerImg} alt="" />
+              </div>
+              <div className="footer-row-1-right"></div>
+            </div>
+            <div className="footer-row-2">
+              <div className="footer-row-2-left"></div>
+              <div className="footer-row-2-right"></div>
+            </div>
+          </div>
+        </div>
+      </div>
       {/*  */}
     </div>
   );

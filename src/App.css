@@ -4,6 +4,7 @@
   background: url(./assets/images/bg.png);
   background-repeat: no-repeat;
   background-size: cover;
+  padding-bottom: 30%;
 }
 
 .adventure {
@@ -134,4 +135,171 @@
   line-height: 1.2;
   text-align: center;
   max-width: 468px;
+}
+
+/*  */
+.special-features-wrapper {
+  background: url(./assets/images/special-features-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  margin-top: -32%;
+  padding-top: 32%;
+  padding-bottom: 30%;
+  position: relative;
+}
+
+.special-feature-title {
+  font-size: 75px;
+  color: rgb(136, 194, 50);
+  line-height: 1.2;
+  text-align: left;
+}
+.special-features-cards {
+  margin-top: 1rem;
+  width: 50%;
+}
+.special-features-card {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem 0;
+  border-bottom: 3px solid #566d44;
+}
+
+.special-features-card-right-title {
+  font-size: 30px;
+  color: rgb(136, 194, 50);
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+}
+
+.special-features-card-right-subtitle {
+  font-size: 22px;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  line-height: 1.2;
+  text-align: left;
+}
+
+/* roadmap-wrapper */
+.roadmap-wrapper {
+  background: url(./assets/images/roadmap-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: -30%;
+  position: relative;
+  padding-top: 30%;
+  z-index: 1000000;
+  padding-bottom: 100px;
+}
+
+.roadmap-btn {
+  display: block;
+  margin: 0 auto;
+  width: fit-content;
+}
+
+.roadmap-btn img {
+  width: clamp(200px, 31.25vw, 800px);
+  margin-bottom: 6rem;
+}
+
+.roadmap-cards {
+  height: 1200px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 200px;
+}
+
+.roadmap-cards-middle-line {
+  width: 10px;
+  height: 100%;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* backed-by-wrapper */
+.backed-by-title {
+  font-size: 57px;
+  color: rgb(136, 194, 50);
+  line-height: 1.2;
+  text-align: left;
+  text-align: center;
+}
+
+.backed-by-cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  gap: 2rem;
+}
+
+.backed-by-card {
+  height: 177px;
+  padding: 1.2rem;
+  z-index: 235;
+  background-color: #6a6e71;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+.backed-by-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* footer-wrapper */
+.footer-wrapper {
+  background-color: #222629;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+
+  padding: 100px 0;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid red;
+  gap: 2rem;
+}
+
+.footer-row-1 {
+  border: 2px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.footer-row-2 {
+  border: 2px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.footer-row-1-left {
+  flex: 1;
+  border: 2px solid green;
+}
+.footer-row-1-right {
+  flex: 1;
+  border: 2px solid green;
+}
+
+.footer-row-2-left {
+  flex: 1;
+  border: 2px solid green;
+}
+.footer-row-2-right {
+  flex: 1;
+  border: 2px solid green;
 }
