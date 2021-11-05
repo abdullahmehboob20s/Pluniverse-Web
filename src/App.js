@@ -20,6 +20,12 @@ import backedByImg5 from "assets/images/backed-by-img-5.png";
 
 import footerImg from "assets/images/footer-img.png";
 
+import facebook from "assets/images/facebook.png";
+import discord from "assets/images/discord.png";
+import twitter from "assets/images/twitter.png";
+import instagram from "assets/images/instagram.png";
+import SocialLink from "components/SocialLink/SocialLink";
+
 function App() {
   return (
     <div className="App">
@@ -147,15 +153,36 @@ function App() {
       <div className="footer-wrapper">
         <div className="container-wrapper">
           <div className="footer">
-            <div className="footer-row-1">
-              <div className="footer-row-1-left">
-                <img className="footer-brand" src={footerImg} alt="" />
+            <div className="footer-top">
+              <img className="footer-brand" src={footerImg} alt="" />
+
+              <div className="footer-input-wrapper">
+                <input
+                  type="text"
+                  placeholder="Email Address"
+                  className="footer-input"
+                />
+                <button className="footer-input-btn">SUBSCRIBE</button>
               </div>
-              <div className="footer-row-1-right"></div>
             </div>
-            <div className="footer-row-2">
-              <div className="footer-row-2-left"></div>
-              <div className="footer-row-2-right"></div>
+
+            <div className="footer-bottom">
+              <div className="stay-connected-wrapper">
+                <p className="stay-connected-title">Stay Connected!</p>
+
+                <div className="social-links">
+                  <SocialLink img={facebook} />
+                  <SocialLink img={discord} />
+                  <SocialLink img={twitter} />
+                  <SocialLink img={instagram} />
+                </div>
+              </div>
+
+              <div className="footer-links">
+                <p className="footer-link">Home</p>
+                <p className="footer-link">Whitepaper</p>
+                <p className="footer-link">Tokenomics</p>
+              </div>
             </div>
           </div>
         </div>
