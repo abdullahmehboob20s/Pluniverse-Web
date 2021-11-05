@@ -1,0 +1,137 @@
+.adventure-wrapper {
+  color: white;
+  padding: 100px 0;
+  background: url(./assets/images/bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.adventure {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.adventure-left {
+  flex: 0.8;
+}
+.adventure-titles .adventure-title {
+  font-size: 40px;
+  color: rgb(255, 255, 255);
+  line-height: 1.2;
+  text-align: left;
+}
+
+.title-green-bold {
+  font-size: 70px;
+  color: #88c232;
+}
+
+.paragraphs {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* game-modes */
+.game-modes {
+  width: 100%;
+  height: 619px;
+  margin: 0 auto;
+  background: url(./assets/images/game-modes-bg.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center center;
+
+  padding: 7rem 0;
+  padding-left: 7rem;
+
+  gap: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 5rem;
+}
+
+.game-modes-left {
+  /* min-width: 600px; */
+  flex: 1;
+  height: fit-content;
+
+  overflow: hidden;
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.game-modes-left img {
+  width: 100%;
+  height: 100%;
+}
+
+.game-modes-left::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  background: url(./assets/images/border.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center center;
+  z-index: 1000000000;
+}
+
+.game-modes-right {
+  flex: 1;
+}
+.game-modes-right-img {
+  max-width: 600px;
+  width: 100%;
+}
+
+.game-modes-right-img-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+
+.game-modes-right-img-wrapper > div {
+  width: fit-content !important;
+}
+
+.game-modes-text-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+  gap: 1.5rem;
+}
+
+.game-modes-text-title p {
+  font-size: 39.795px;
+  color: rgb(136, 194, 50);
+  line-height: 1.2;
+  text-align: center;
+}
+
+.game-modes-text-title img {
+  cursor: pointer;
+}
+
+.game-modes-text-subtitle {
+  margin: 0 auto;
+  margin-top: 1rem;
+
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  line-height: 1.2;
+  text-align: center;
+  max-width: 468px;
+}
