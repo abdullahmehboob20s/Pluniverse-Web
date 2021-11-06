@@ -33,13 +33,20 @@ import pvpImg from "assets/images/PVP.jpg";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
-import SwiperCore, { Navigation } from "swiper";
 
+import SwiperCore, { Navigation } from "swiper";
 SwiperCore.use([Navigation]);
 
 function App() {
-  const navigationPrevRef = React.useRef(null);
-  const navigationNextRef = React.useRef(null);
+  let navigationPrevRef = React.useRef(null);
+  let navigationNextRef = React.useRef(null);
+  const [swiperIndex, setSwiperIndex] = React.useState(0);
+  const swiperData = [
+    "Join hands with other players and for a Guild in order to go overcome and defeat the ancient Gods and seige their territories for grand rewards and various treasures.",
+    "Breed and train your plus to maximize your potential in various game moes to earn more!",
+    "Join Hands with other plays and form a guild in order to overcome and defeat the ancient gods and seige their territories.",
+    "Prove yourself in the coliseum and show off your skills with fellow players to earn more rewards!",
+  ];
   return (
     <div className="App">
       <Navbar />
@@ -83,15 +90,29 @@ function App() {
               <Swiper
                 slidesPerView={1}
                 spaceBetween={0}
+                // onInit={(swiper) => {
+                //   swiper.params.navigation.nextEl = navigationNextRef.current;
+                //   swiper.params.navigation.prevEl = navigationPrevRef.current;
+                //   swiper.navigation.init();
+                //   swiper.navigation.update();
+                // }}
+                onSlideChange={(e) => setSwiperIndex(e.activeIndex)}
+                onSwiper={(swiper) => {
+                  // Delay execution for the refs to be defined
+                  setTimeout(() => {
+                    // Override prevEl & nextEl now that refs are defined
+                    swiper.params.navigation.prevEl = navigationPrevRef.current;
+                    swiper.params.navigation.nextEl = navigationNextRef.current;
+
+                    // Re-init navigation
+                    swiper.navigation.destroy();
+                    swiper.navigation.init();
+                    swiper.navigation.update();
+                  });
+                }}
                 navigation={{
                   prevEl: navigationPrevRef.current,
                   nextEl: navigationNextRef.current,
-                }}
-                onInit={(swiper) => {
-                  swiper.params.navigation.prevEl = navigationPrevRef.current;
-                  swiper.params.navigation.nextEl = navigationNextRef.current;
-                  swiper.navigation.init();
-                  swiper.navigation.update();
                 }}
               >
                 <SwiperSlide>
@@ -129,9 +150,7 @@ function App() {
               </div>
 
               <p className="game-modes-text-subtitle fs-20px white weight-8 lh-1 text-center">
-                Join hands with other players and for a Guild in order to go
-                overcome and defeat the ancient Gods and seige their territories
-                for grand rewards and various treasures.
+                {swiperData[swiperIndex]}
               </p>
             </div>
           </div>
