@@ -10,11 +10,11 @@ function Card() {
         <img src={cardImg} alt="" />
       </div>
       <div className="special-features-card-right">
-        <p className="special-features-card-right-title waghu-family">
+        <p className="fs-30px green lh-1 waghu-family mb-8px">
           OWNERSHIPS <br />
           <img src={textImg} alt="" />
         </p>
-        <p className="special-features-card-right-subtitle">
+        <p className="fs-22px white weight-8">
           All game assets are securely stores on the blockchain giving players
           exclusive ownership
         </p>

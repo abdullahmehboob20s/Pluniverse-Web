@@ -29,7 +29,7 @@ import SocialLink from "components/SocialLink/SocialLink";
 function App() {
   return (
     <div className="App">
-      <Navbar />
+      {/* <Navbar /> */}
       <div className="container">
         <HeroPluniverse />
       </div>
@@ -39,19 +39,19 @@ function App() {
           <div className="adventure">
             <div className="adventure-left">
               <div className="adventure-titles">
-                <p className="waghu-family adventure-title">
+                <p className="waghu-family  fs-40px white lh-1">
                   The most awaited play to <br />
-                  <span className="title-green-bold">EARN ADVENTURE</span>
+                  <span className="fs-70px green ">EARN ADVENTURE</span>
                 </p>
                 <img src={textImg} alt="" />
                 <div className="paragraphs">
-                  <p className="paragraph">
+                  <p>
                     Pluniverse is a multiplayer NFT game wherein the main
                     characters are called Plu’s which are elemental species from
                     an alternate universe. Embark on a grand expedition to gain
                     items that you can sell into the marketplace for Real Money
                   </p>
-                  <p className="paragraph">
+                  <p>
                     Lastly, form a guild with other players to extend your
                     influence and keep building your empire during this era of
                     peace in preparation for the fated “Great War”
@@ -83,11 +83,13 @@ function App() {
 
               <div className="game-modes-text-title">
                 <img src={arrowLeft} alt="" />
-                <p className="waghu-family">GUILD QUESTS</p>
+                <p className="waghu-family fs-40px green text-center lh-1">
+                  GUILD QUESTS
+                </p>
                 <img src={arrowRight} alt="" />
               </div>
 
-              <p className="game-modes-text-subtitle">
+              <p className="game-modes-text-subtitle fs-20px white weight-8 lh-1 text-center">
                 Join hands with other players and for a Guild in order to go
                 overcome and defeat the ancient Gods and seige their territories
                 for grand rewards and various treasures.
@@ -100,9 +102,7 @@ function App() {
       <div className="special-features-wrapper">
         <div className="container-wrapper">
           <div>
-            <p className="special-feature-title waghu-family">
-              SPECIAL FEATURES
-            </p>
+            <p className="green lh-1 waghu-family fs-75px">SPECIAL FEATURES</p>
             <img src={textImg} alt="" />
           </div>
 
@@ -132,9 +132,10 @@ function App() {
                 <RoadmapCard to="left" />
               </div>
             </div>
-            {/*  */}
             <div className="backed-by-wrapper">
-              <p className="backed-by-title waghu-family">BACKED BY</p>
+              <p className="fs-57px text-center green lh-1 waghu-family">
+                BACKED BY
+              </p>
 
               <div className="backed-by-cards">
                 <BackedByCard img={backedByImg1} />
@@ -144,12 +145,10 @@ function App() {
                 <BackedByCard img={backedByImg5} />
               </div>
             </div>
-            {/*  */}
           </div>
         </div>
       </div>
 
-      {/*  */}
       <div className="footer-wrapper">
         <div className="container-wrapper">
           <div className="footer">
@@ -168,7 +167,7 @@ function App() {
 
             <div className="footer-bottom">
               <div className="stay-connected-wrapper">
-                <p className="stay-connected-title">Stay Connected!</p>
+                <p className="fs-22px white weight-8 lh-1">Stay Connected!</p>
 
                 <div className="social-links">
                   <SocialLink img={facebook} />
@@ -179,15 +178,18 @@ function App() {
               </div>
 
               <div className="footer-links">
-                <p className="footer-link">Home</p>
-                <p className="footer-link">Whitepaper</p>
-                <p className="footer-link">Tokenomics</p>
+                <p className="fs-25px green weight-8 pointer lh-1">Home</p>
+                <p className="fs-25px green weight-8 pointer lh-1">
+                  Whitepaper
+                </p>
+                <p className="fs-25px green weight-8 pointer lh-1">
+                  Tokenomics
+                </p>
               </div>
             </div>
           </div>
         </div>
       </div>
-      {/*  */}
     </div>
   );
 }
