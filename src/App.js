@@ -28,6 +28,8 @@ import instagram from "assets/images/instagram.png";
 import SocialLink from "components/SocialLink/SocialLink";
 
 import breedingImg from "assets/images/breeding.jpg";
+import guildQuest from "assets/images/Guild-Quest.jpg";
+import pvpImg from "assets/images/PVP.jpg";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
@@ -97,6 +99,12 @@ function App() {
                 </SwiperSlide>
                 <SwiperSlide>
                   <img src={breedingImg} alt="" />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img src={guildQuest} alt="" />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img src={pvpImg} alt="" />
                 </SwiperSlide>
               </Swiper>
             </div>
