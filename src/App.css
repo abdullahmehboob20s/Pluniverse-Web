@@ -56,12 +56,16 @@
   border-radius: 5px;
   z-index: 2;
   padding: 7px 5px;
-  padding-bottom: 0;
+  /* padding-bottom: 0; */
 }
 
 .game-modes-left img {
   width: 100%;
   height: 100%;
+}
+
+.swiper-slide {
+  height: auto !important;
 }
 
 .game-modes-left::before {
