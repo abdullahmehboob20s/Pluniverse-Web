@@ -1,4 +1,5 @@
 import "./App.css";
+import React from "react";
 import Navbar from "layouts/Navbar/Navbar";
 import HeroPluniverse from "./components/HeroPluniverse";
 import textImg from "assets/images/text-img.png";
@@ -26,10 +27,20 @@ import twitter from "assets/images/twitter.png";
 import instagram from "assets/images/instagram.png";
 import SocialLink from "components/SocialLink/SocialLink";
 
+import breedingImg from "assets/images/breeding.jpg";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/swiper-bundle.css";
+import SwiperCore, { Navigation } from "swiper";
+
+SwiperCore.use([Navigation]);
+
 function App() {
+  const navigationPrevRef = React.useRef(null);
+  const navigationNextRef = React.useRef(null);
   return (
     <div className="App">
-      {/* <Navbar /> */}
+      <Navbar />
       <div className="container">
         <HeroPluniverse />
       </div>
@@ -67,7 +78,27 @@ function App() {
           {/*  */}
           <div className="game-modes">
             <div className="game-modes-left">
-              <img src={expeditionImg} alt="" />
+              <Swiper
+                slidesPerView={1}
+                spaceBetween={0}
+                navigation={{
+                  prevEl: navigationPrevRef.current,
+                  nextEl: navigationNextRef.current,
+                }}
+                onInit={(swiper) => {
+                  swiper.params.navigation.prevEl = navigationPrevRef.current;
+                  swiper.params.navigation.nextEl = navigationNextRef.current;
+                  swiper.navigation.init();
+                  swiper.navigation.update();
+                }}
+              >
+                <SwiperSlide>
+                  <img src={expeditionImg} alt="" />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img src={breedingImg} alt="" />
+                </SwiperSlide>
+              </Swiper>
             </div>
             <div className="game-modes-right">
               <div className="game-modes-right-img-wrapper">
@@ -82,11 +113,11 @@ function App() {
               </div>
 
               <div className="game-modes-text-title">
-                <img src={arrowLeft} alt="" />
+                <img src={arrowLeft} ref={navigationPrevRef} alt="" />
                 <p className="waghu-family fs-40px green text-center lh-1">
                   GUILD QUESTS
                 </p>
-                <img src={arrowRight} alt="" />
+                <img src={arrowRight} ref={navigationNextRef} alt="" />
               </div>
 
               <p className="game-modes-text-subtitle fs-20px white weight-8 lh-1 text-center">
