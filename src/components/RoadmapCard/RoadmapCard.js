@@ -21,17 +21,10 @@ function RoadmapCard(props) {
           />
         </div>
         <div className="roadmap-card-content-right">
-          <p className="fs-28px green lh-1 mb-5px">Year 2020</p>
-          <p className="fs-18px green lh-1">Idea & research</p>
-          <p className="fs-18px green lh-1">Game Development Consultations</p>
-          <p className="fs-18px green lh-1">Blockchain Tech Consultations</p>
-          <p className="fs-18px green lh-1">Business plan</p>
-          <p className="fs-18px green lh-1">Team creation</p>
-          <p className="fs-18px green lh-1">
-            Characters and Gameplay concept development
-          </p>
-          <p className="fs-18px green lh-1">Private fund allocation</p>
-          <p className="fs-18px green lh-1">Network selection Negotiation</p>
+          <p className="fs-28px green lh-1 mb-5px">{props.title}</p>
+          {props.pointes?.map((point, index) => (
+            <p className="fs-18px green lh-1">{point}</p>
+          ))}
         </div>
       </div>
     </div>

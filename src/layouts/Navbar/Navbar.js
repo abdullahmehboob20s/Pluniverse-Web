@@ -53,7 +53,8 @@ function Navbar() {
             MARKEtplace
           </a>
           <a
-            href="#"
+            href="https://whitepaper.pluniverse.io/pluniverse-whitepaper/"
+            target="_blank"
             className="navbar-link fs-20px uppercase white weight-8 lh-1"
           >
             whitepaper

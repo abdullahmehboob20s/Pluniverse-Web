@@ -42,10 +42,26 @@ function App() {
   let navigationNextRef = React.useRef(null);
   const [swiperIndex, setSwiperIndex] = React.useState(0);
   const swiperData = [
-    "Join hands with other players and for a Guild in order to go overcome and defeat the ancient Gods and seige their territories for grand rewards and various treasures.",
-    "Breed and train your plus to maximize your potential in various game moes to earn more!",
-    "Join Hands with other plays and form a guild in order to overcome and defeat the ancient gods and seige their territories.",
-    "Prove yourself in the coliseum and show off your skills with fellow players to earn more rewards!",
+    {
+      title: "Expedition",
+      subtitle:
+        "Join hands with other players and for a Guild in order to go overcome and defeat the ancient Gods and seige their territories for grand rewards and various treasures.",
+    },
+    {
+      title: "Breeding",
+      subtitle:
+        "Breed and train your plus to maximize your potential in various game moes to earn more!",
+    },
+    {
+      title: "Guild Quest",
+      subtitle:
+        "Join Hands with other plays and form a guild in order to overcome and defeat the ancient gods and seige their territories.",
+    },
+    {
+      title: "PVP",
+      subtitle:
+        "Prove yourself in the coliseum and show off your skills with fellow players to earn more rewards!",
+    },
   ];
   return (
     <div className="App">
@@ -144,13 +160,13 @@ function App() {
               <div className="game-modes-text-title">
                 <img src={arrowLeft} ref={navigationPrevRef} alt="" />
                 <p className="waghu-family fs-40px green text-center lh-1">
-                  GUILD QUESTS
+                  {swiperData[swiperIndex].title}
                 </p>
                 <img src={arrowRight} ref={navigationNextRef} alt="" />
               </div>
 
               <p className="game-modes-text-subtitle fs-20px white weight-8 lh-1 text-center">
-                {swiperData[swiperIndex]}
+                {swiperData[swiperIndex].subtitle}
               </p>
             </div>
           </div>
@@ -165,10 +181,22 @@ function App() {
           </div>
 
           <div className="special-features-cards">
-            <Card />
-            <Card />
-            <Card />
-            <Card />
+            <Card
+              title="OWNERSHIPS"
+              subtitle="All game assets are securely stores on the blockchain giving players exclusive ownership"
+            />
+            <Card
+              title="MARKETPLACE"
+              subtitle="Trade with various players while creating your own impact to the marketplace"
+            />
+            <Card
+              title="DEFLATIONARY TOKEN"
+              subtitle="Various burning mechanisms allow preservation of the token value"
+            />
+            <Card
+              title="GUILD SYSTEM"
+              subtitle="Create an exciting ecosystem for the cmunity to earn more & connect with others"
+            />
           </div>
         </div>
       </div>
@@ -182,12 +210,54 @@ function App() {
 
             <div className="roadmap-cards">
               <div className="roadmap-cards-middle-line">
-                <RoadmapCard />
-                <RoadmapCard to="left" />
-                <RoadmapCard />
-                <RoadmapCard to="left" />
-                <RoadmapCard />
-                <RoadmapCard to="left" />
+                <RoadmapCard
+                  title="Year 2020"
+                  pointes={[
+                    "Idea & research",
+                    "Game Development Consultations",
+                    "Blockchain Tech Consultations",
+                    "Business plan",
+                    "Team creation",
+                    "Characters and Gameplay concept development",
+                    "Private fund allocation",
+                    "Network selection Negotiation",
+                  ]}
+                />
+                <RoadmapCard
+                  title="Q2 2021"
+                  pointes={["Smart contracts development"]}
+                  to="left"
+                />
+                <RoadmapCard
+                  title="Q3 2021"
+                  pointes={["Game concept adjustments.", "Mini Website Luanch"]}
+                />
+
+                <RoadmapCard
+                  title="Q4 2021"
+                  pointes={[
+                    "Full Website Launch",
+                    "Founder's Badge Sale.",
+                    "Token Presale 1&2",
+                    "Airdrop 1&2",
+                    "Pancakeswap Listing.",
+                    "Locked Pancakeswap Liquidity Pool.",
+                  ]}
+                  to="left"
+                />
+
+                <RoadmapCard
+                  title="Q1 2022"
+                  pointes={[
+                    "Q1 2022: Plu Origin Sale",
+                    "Q1 2022: NFT Marketplace",
+                  ]}
+                />
+                <RoadmapCard
+                  title="Q2 2022"
+                  pointes={[" 2D Alpha Release", "PLV Staking"]}
+                  to="left"
+                />
               </div>
             </div>
             <div className="backed-by-wrapper">
