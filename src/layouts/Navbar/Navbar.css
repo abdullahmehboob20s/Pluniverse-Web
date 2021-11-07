@@ -67,9 +67,10 @@
 
 @media (max-width: 760px) {
   .navbar {
-    justify-content: end;
+    justify-content: end !important;
   }
   .hamburger {
+    margin-left: auto !important;
     display: block !important;
     opacity: 1;
     position: relative;
