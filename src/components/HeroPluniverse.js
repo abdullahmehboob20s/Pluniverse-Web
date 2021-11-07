@@ -22,6 +22,7 @@ import discordIcon from "assets/images/discord-icon.png";
 import instagramIcon from "assets/images/instagram-icon.png";
 import facebookIcon from "assets/images/facebook-icon.png";
 import telegramIcon from "assets/images/telegram-icon.png";
+import Navbar from "layouts/Navbar/Navbar";
 
 function HeroPluniverse() {
   const pluniverseEl = useRef();
@@ -96,6 +97,7 @@ function HeroPluniverse() {
           matches ? { height: "100%", width: "100%", position: "relative" } : {}
         }
       >
+        <Navbar />
         <div className="hero-content">
           <div className="social-icons">
             <a className="social-icon-btn" href="#" target="_blank">

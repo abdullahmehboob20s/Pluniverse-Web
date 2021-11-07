@@ -5,7 +5,11 @@
   padding: 0 100px;
   background-color: #204b9a;
   height: 75px;
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10000000 !important;
 }
 
 .navbar-wrapper {
