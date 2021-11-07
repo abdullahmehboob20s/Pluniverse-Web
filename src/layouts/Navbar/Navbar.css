@@ -67,8 +67,12 @@
   }
   .hamburger {
     display: block;
-    width: 30px;
     cursor: pointer;
+    z-index: 1000000;
+  }
+
+  .hamburger img {
+    width: 30px;
   }
 
   .navbar-wrapper {

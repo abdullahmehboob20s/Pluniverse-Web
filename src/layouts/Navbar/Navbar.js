@@ -26,12 +26,9 @@ function Navbar() {
       <a href="#" className="navbar-logo">
         <img src={navbarLogo} alt="" />
       </a>
-      <img
-        src={hamburger}
-        onClick={() => setShow(!show)}
-        alt=""
-        className="hamburger"
-      />
+      <div className="hamburger">
+        <img src={hamburger} onClick={() => setShow(!show)} alt="" />
+      </div>
       <div className={`navbar-wrapper ${show ? "show" : ""} `}>
         <img
           src={cross}

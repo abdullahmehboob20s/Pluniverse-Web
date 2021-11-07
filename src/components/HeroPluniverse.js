@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import "./HeroPluniverse.css";
 import pluniverseImage1 from "assets/images/pluniverseImage1.png";
 import pluniverseImage10 from "assets/images/pluniverseImage10.png";
 import pluniverseImage11 from "assets/images/pluniverseImage11.png";
@@ -15,6 +16,13 @@ import pluniverseImage21 from "assets/images/pluniverseImage21.gif";
 import pluniverseImage22 from "assets/images/pluniverseImage22.gif";
 import pluniverseImage23 from "assets/images/pluniverseImage23.png";
 import gsap from "gsap";
+
+import twitterIcon from "assets/images/twitter-icon.png";
+import discordIcon from "assets/images/discord-icon.png";
+import instagramIcon from "assets/images/instagram-icon.png";
+import facebookIcon from "assets/images/facebook-icon.png";
+import telegramIcon from "assets/images/telegram-icon.png";
+
 function HeroPluniverse() {
   const pluniverseEl = useRef();
   const q = gsap.utils.selector(pluniverseEl);
@@ -81,7 +89,32 @@ function HeroPluniverse() {
     <div
       ref={pluniverseEl}
       style={matches ? { height: "100%", width: "100%" } : {}}
+      className="hero-img"
     >
+      <div className="hero-content">
+        <div className="social-icons">
+          <a className="social-icon-btn" href="#" target="_blank">
+            <img src={twitterIcon} alt="" />
+          </a>
+          <a className="social-icon-btn" href="#" target="_blank">
+            <img src={discordIcon} alt="" />
+          </a>
+          <a className="social-icon-btn" href="#" target="_blank">
+            <img src={instagramIcon} alt="" />
+          </a>
+          <a className="social-icon-btn" href="#" target="_blank">
+            <img src={facebookIcon} alt="" />
+          </a>
+          <a className="social-icon-btn" href="#" target="_blank">
+            <img src={telegramIcon} alt="" />
+          </a>
+        </div>
+
+        <a href="#" className="terms-condition">
+          Privacy Policy | Terms & Conditions
+        </a>
+      </div>
+
       <div
         className="Canvas"
         style={matches ? { height: "100%", width: "100%" } : {}}
