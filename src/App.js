@@ -35,6 +35,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
 
 import SwiperCore, { Navigation } from "swiper";
+import AudioPlayer from "components/AudioPlayer";
 SwiperCore.use([Navigation]);
 
 function App() {
@@ -65,6 +66,7 @@ function App() {
   ];
   return (
     <div className="App">
+      <AudioPlayer />
       <div className="container">
         <HeroPluniverse />
       </div>
