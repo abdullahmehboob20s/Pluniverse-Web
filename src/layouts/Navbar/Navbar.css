@@ -66,9 +66,11 @@
     justify-content: end;
   }
   .hamburger {
-    display: block;
+    display: block !important;
+    opacity: 1;
+    position: relative;
     cursor: pointer;
-    z-index: 1000000;
+    z-index: 1000;
   }
 
   .hamburger img {
